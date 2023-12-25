@@ -1,0 +1,6 @@
+west-commands:
+  - file: scripts/west_commands/cortex-debug.py
+    commands:
+      - name: cortex-debug
+        class: Debug
+        help: Output cortex-debug setting scripts

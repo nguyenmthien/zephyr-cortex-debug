@@ -1,0 +1,19 @@
+manifest:
+  defaults:
+    remote: upstream
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+  projects:
+    - name: zephyr
+      revision: main
+      import: 
+        path-prefix: deps
+        name-allowlist:
+          - cmsis
+          - hal_stm32
+          - picolibc
+  self:
+    path: cortex-debug
+    west-commands: scripts/west-commands.yml
+
