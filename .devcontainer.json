@@ -1,6 +1,8 @@
 {
     "name": "Zephyr Cortex Debug",
     "image": "zephyrprojectrtos/ci",
+    "containerUser": "user",
+    "remoteUser": "user",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,9 +18,18 @@
                 "[python]": {
                     "editor.defaultFormatter": "ms-python.autopep8",
                     "editor.formatOnSave": true
+                },
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    },
+                    "fish": {
+                        "path": "fish"
+                    }
                 }
             }
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fish"
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fish gdbserver"
 }
