@@ -31,5 +31,5 @@
             }
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fish gdbserver"
+    "postStartCommand": "sudo apt-get update; sudo apt-get install -y fish gdbserver; exit 0"
 }
