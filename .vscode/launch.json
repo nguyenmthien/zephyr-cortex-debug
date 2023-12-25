@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Zephyr Debug",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "external",
+            "cwd": "${workspaceFolder}/build",
+            "executable": "${workspaceFolder}/build/zephyr/zephyr.exe",
+            "gdbPath": "/usr/bin/gdb",
+            "gdbTarget": "localhost:3333",
+            "overrideAttachCommands": [],
+            "overrideRestartCommands": [
+                "-exec-run"
+            ],
+            "preLaunchTask": "Run GDB Server"
+        },
+    ]
+}

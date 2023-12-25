@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run GDB Server",
+            "type": "shell",
+            "command": "gdbserver --once localhost:3333 ${workspaceFolder}/build/zephyr/zephyr.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true
+        },
+        {
+            "label": "Build Hello world",
+            "type": "shell",
+            "command": "west build -b native_sim hello_world",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": false
+        }
+    ]
+}
